@@ -1,6 +1,6 @@
 # tachyons-js
 
-Use tachyons with your favorite CSS-in-JS composition solution.
+Use [tachyons](http://tachyons.io) with your favorite CSS-in-JS composition solution.
 
 ## Differences:
 - `snake_cased` rather than `kebab-cased`
