@@ -34,7 +34,6 @@ const queryKeys = R.keys(queries);
 
 // mergeMediaQueries :: a -> a
 const mergeMediaQueries = styles => {
-  // const withQueries = R.pick(queryKeys, styles);
   const noQueries = R.omit(queryKeys, styles);
 
   const flipMediaQuery = key => {
@@ -118,8 +117,7 @@ tachyonsModules()
   .then(R.toPairs)
   .then(toJS)
   .then(mergeMediaQueries)
-  // .then(processVariables)
-  // .then(x => console.log(x))
+  .then(R.omit(['root']))
   .then(toJSON)
   .then(writeFile)
   .catch(e => console.log(e))
