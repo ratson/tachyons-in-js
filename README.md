@@ -5,6 +5,7 @@ Use [tachyons](http://tachyons.io) with your favorite CSS-in-JS composition solu
 ## Differences:
 - `snake_cased` rather than `kebab-cased`
 
+## Usage:
 Works great with [aphrodite](https://github.com/Khan/aphrodite):
 ```css
 :root {
