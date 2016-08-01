@@ -14,48 +14,56 @@ const moduleBlacklist = [
   'tachyons-webpack',
 ];
 
+// concatMediaQueries :: String -> { k: v } -> { k: v } -> *
 function concatMediaQueries (key, left, right) {
-  console.log('MERGING: ', key);
   return R.merge(left, right);
 }
 
+// toJS :: CSS -> { k: v }
 const toJS = R.reduce((acc, [k, v]) => {
   return R.mergeWithKey(concatMediaQueries, acc, nativeCSS.convert(v));
 }, {})
 
-// hmm, I need to be able to replace the var(--foo)
-// variables. maybe I should have done this earlier.
-const processVariables = styles => {
-  const { root } = styles;
-  const rootKeys = R.keys(root);
-  return R.compose(
-    R.reduce((acc, [k, v]) => {
-      // console.log(R.values(v));
-      // console.log(root)
-      // console.log(k, v);
-      return acc;
-    }, {}),
-    R.toPairs
-  )(R.omit('root', styles))
+
+const queries = {
+  '@media (--breakpoint-not-small)': '@media screen and (min-width: 48em)',
+  '@media (--breakpoint-medium)': '@media screen and (min-width: 48em) and (max-width: 64em)',
+  '@media (--breakpoint-large)': '@media screen and (min-width: 64em)',
 }
 
-tachyonsModules()
-  .then(R.pluck('name'))
-  .then(R.reject(R.contains(R.__, moduleBlacklist)))
-  .then(R.reduce(constructFile, {}))
-  .then(R.toPairs)
-  .then(toJS)
-  // .then(processVariables)
-  // .then(x => console.log(x))
-  .then(toJSON)
-  .then(addExports)
-  .then(writeFile)
-  .catch(e => console.log(e))
+const queryKeys = R.keys(queries);
 
-function toJSON(js) { return JSON.stringify(js, null, 2); }
+// mergeMediaQueries :: a -> a
+const mergeMediaQueries = styles => {
+  // const withQueries = R.pick(queryKeys, styles);
+  const noQueries = R.omit(queryKeys, styles);
 
+  const flipMediaQuery = key => {
+    const rules = styles[key];
+
+    return R.reduce((acc, selector) => {
+      const newBp = queries[key];
+      return R.assocPath([selector, newBp], rules[selector], acc);
+    }, {}, R.keys(rules));
+  }
+
+  const flippedQueries = R.reduce((acc, key) => {
+    return R.merge(acc, flipMediaQuery(key));
+  }, {}, queryKeys);
+
+  return R.merge(noQueries, flippedQueries);
+}
+
+// addExports :: String -> String
 function addExports(json) { return `module.exports = ${json}` }
 
+// toJSON :: { k: v } -> JSON
+const toJSON = R.compose(
+  addExports,
+  js => JSON.stringify(js, null, 2)
+)
+
+// writeFile :: JSON -> Promise [fs]
 function writeFile(file) {
   return new Promise((res, rej) => {
     fs.writeFile('index.js', file, (err, result) => {
@@ -65,6 +73,7 @@ function writeFile(file) {
   })
 }
 
+// constructFile :: { k: v } -> String -> { k: v }
 function constructFile (modules, module) {
   var moduleLocation = getModuleCssLocation(module)
   var moduleName = getModuleKey(module)
@@ -72,14 +81,17 @@ function constructFile (modules, module) {
   return R.assoc(moduleName, moduleLocation, modules);
 }
 
+// isTachyonsModule :: String -> Boolean
 function isTachyonsModule (module) {
   return module.indexOf('tachyons') !== -1
 }
 
+// isNormalizeModule :: String -> Boolean
 function isNormalizeModule (module) {
   return module === 'normalize.css'
 }
 
+// getModuleCssLocation :: String -> String
 function getModuleCssLocation (module) {
   try {
     if (isTachyonsModule(module)) {
@@ -94,7 +106,22 @@ function getModuleCssLocation (module) {
   }
 }
 
+// getModuleKey :: String -> String
 function getModuleKey (module) {
-  return module.replace(/(tachyons-|\.css)/ig, '')
+  return R.replace(/(tachyons-|\.css)/ig, '', module)
 }
+
+
+tachyonsModules()
+  .then(R.pluck('name'))
+  .then(R.reject(R.contains(R.__, moduleBlacklist)))
+  .then(R.reduce(constructFile, {}))
+  .then(R.toPairs)
+  .then(toJS)
+  .then(mergeMediaQueries)
+  // .then(processVariables)
+  // .then(x => console.log(x))
+  .then(toJSON)
+  .then(writeFile)
+  .catch(e => console.log(e))
 
