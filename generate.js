@@ -109,6 +109,35 @@ function getModuleKey (module) {
   return R.replace(/(tachyons-|\.css)/ig, '', module)
 }
 
+// hoverRegex :: RegExp
+const hoverRegex = /_hover$/
+
+// isHoverStyle :: String -> Boolean
+const isHoverStyle = R.test(hoverRegex)
+
+const stripHoverSuffix = R.replace(hoverRegex, '')
+
+const extractHoverStyles = styles => {
+  return R.reduce((acc, key) => {
+    if (isHoverStyle(key)) {
+      const rootKey = stripHoverSuffix(key);
+
+      if (styles[rootKey]) {
+        return R.compose(
+          R.dissoc(key),
+          R.assoc(':hover', styles[key])
+        )(acc);
+      }
+
+      return R.compose(
+        R.dissoc(key),
+        R.assoc(rootKey, { ':hover': styles[key] })
+      )(acc);
+    }
+    return acc;
+  }, styles, R.keys(styles));
+}
+
 
 tachyonsModules()
   .then(R.pluck('name'))
@@ -117,6 +146,7 @@ tachyonsModules()
   .then(R.toPairs)
   .then(toJS)
   .then(mergeMediaQueries)
+  .then(extractHoverStyles)
   .then(R.omit(['root']))
   .then(toJSON)
   .then(writeFile)

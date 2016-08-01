@@ -982,10 +982,6 @@ module.exports = {
     "opacity": "1",
     "transition": "opacity .15s ease-in"
   },
-  "dim_hover": {
-    "opacity": ".5",
-    "transition": "opacity .15s ease-in"
-  },
   "dim_focus": {
     "opacity": ".5",
     "transition": "opacity .15s ease-in"
@@ -1010,26 +1006,14 @@ module.exports = {
     "opacity": "1",
     "transition": "opacity .15s ease-in"
   },
-  "underline_hover_hover": {
-    "text-decoration": "underline"
-  },
   "underline_hover_focus": {
     "text-decoration": "underline"
   },
   "grow": {
     "transition": "transform .2s"
   },
-  "grow_hover": {
-    "transform": "scale(1.05)"
-  },
   "grow_large": {
     "transition": "transform .2s"
-  },
-  "grow_large_hover": {
-    "transform": "scale(1.2)"
-  },
-  "pointer_hover": {
-    "cursor": "pointer"
   },
   "tracked": {
     "letter-spacing": ".16em"
@@ -1057,9 +1041,6 @@ module.exports = {
     "transition": "color .15s ease-in"
   },
   "link_visited": {
-    "transition": "color .15s ease-in"
-  },
-  "link_hover": {
     "transition": "color .15s ease-in"
   },
   "link_active": {
@@ -1519,144 +1500,6 @@ module.exports = {
     "background-color": "var(--light-yellow)"
   },
   "bg_light_red": {
-    "background-color": "var(--light-red)"
-  },
-  "hover_black_hover": {
-    "color": "var(--black)"
-  },
-  "hover_near_black_hover": {
-    "color": "var(--near-black)"
-  },
-  "hover_dark_gray_hover": {
-    "color": "var(--dark-gray)"
-  },
-  "hover_mid_gray_hover": {
-    "color": "var(--mid-gray)"
-  },
-  "hover_gray_hover": {
-    "color": "var(--gray)"
-  },
-  "hover_silver_hover": {
-    "color": "var(--silver)"
-  },
-  "hover_light_silver_hover": {
-    "color": "var(--light-silver)"
-  },
-  "hover_moon_gray_hover": {
-    "color": "var(--moon-gray)"
-  },
-  "hover_light_gray_hover": {
-    "color": "var(--light-gray)"
-  },
-  "hover_near_white_hover": {
-    "color": "var(--near-white)"
-  },
-  "hover_white_hover": {
-    "color": "var(--white)"
-  },
-  "hover_bg_black_hover": {
-    "background-color": "var(--black)"
-  },
-  "hover_bg_near_black_hover": {
-    "background-color": "var(--near-black)"
-  },
-  "hover_bg_dark_gray_hover": {
-    "background-color": "var(--dark-gray)"
-  },
-  "hover_bg_mid_gray_hover": {
-    "background-color": "var(--mid-gray)"
-  },
-  "hover_bg_gray_hover": {
-    "background-color": "var(--gray)"
-  },
-  "hover_bg_silver_hover": {
-    "background-color": "var(--silver)"
-  },
-  "hover_bg_light_silver_hover": {
-    "background-color": "var(--light-silver)"
-  },
-  "hover_bg_moon_gray_hover": {
-    "background-color": "var(--moon-gray)"
-  },
-  "hover_bg_light_gray_hover": {
-    "background-color": "var(--light-gray)"
-  },
-  "hover_bg_near_white_hover": {
-    "background-color": "var(--near-white)"
-  },
-  "hover_bg_white_hover": {
-    "background-color": "var(--white)"
-  },
-  "hover_bg_transparent_hover": {
-    "background-color": "var(--transparent)"
-  },
-  "hover_bg_dark_red_hover": {
-    "background-color": "var(--dark-red)"
-  },
-  "hover_bg_red_hover": {
-    "background-color": "var(--red)"
-  },
-  "hover_bg_orange_hover": {
-    "background-color": "var(--orange)"
-  },
-  "hover_bg_gold_hover": {
-    "background-color": "var(--gold)"
-  },
-  "hover_bg_yellow_hover": {
-    "background-color": "var(--yellow)"
-  },
-  "hover_bg_purple_hover": {
-    "background-color": "var(--purple)"
-  },
-  "hover_bg_light_purple_hover": {
-    "background-color": "var(--light-purple)"
-  },
-  "hover_bg_hot_pink_hover": {
-    "background-color": "var(--hot-pink)"
-  },
-  "hover_bg_dark_pink_hover": {
-    "background-color": "var(--dark-pink)"
-  },
-  "hover_bg_pink_hover": {
-    "background-color": "var(--pink)"
-  },
-  "hover_bg_dark_green_hover": {
-    "background-color": "var(--dark-green)"
-  },
-  "hover_bg_green_hover": {
-    "background-color": "var(--green)"
-  },
-  "hover_bg_navy_hover": {
-    "background-color": "var(--navy)"
-  },
-  "hover_bg_dark_blue_hover": {
-    "background-color": "var(--dark-blue)"
-  },
-  "hover_bg_blue_hover": {
-    "background-color": "var(--blue)"
-  },
-  "hover_bg_light_blue_hover": {
-    "background-color": "var(--light-blue)"
-  },
-  "hover_bg_lightest_blue_hover": {
-    "background-color": "var(--lightest-blue)"
-  },
-  "hover_bg_washed_blue_hover": {
-    "background-color": "var(--washed-blue)"
-  },
-  "hover_bg_washed_green_hover": {
-    "background-color": "var(--washed-green)"
-  },
-  "hover_bg_washed_yellow_hover": {
-    "background-color": "var(--washed-yellow)"
-  },
-  "hover_bg_light_pink_hover": {
-    "background-color": "var(--light-pink)"
-  },
-  "hover_bg_light_yellow_hover": {
-    "background-color": "var(--light-yellow)"
-  },
-  "hover_bg_light_red_hover": {
     "background-color": "var(--light-red)"
   },
   "pa0": {
@@ -7486,6 +7329,249 @@ module.exports = {
   "word_nowrap_l": {
     "@media screen and (min-width: 64em)": {
       "word-break": "keep-all"
+    }
+  },
+  ":hover": {
+    "transition": "color .15s ease-in"
+  },
+  "underline_hover": {
+    ":hover": {
+      "text-decoration": "underline"
+    }
+  },
+  "pointer": {
+    ":hover": {
+      "cursor": "pointer"
+    }
+  },
+  "hover_black": {
+    ":hover": {
+      "color": "var(--black)"
+    }
+  },
+  "hover_near_black": {
+    ":hover": {
+      "color": "var(--near-black)"
+    }
+  },
+  "hover_dark_gray": {
+    ":hover": {
+      "color": "var(--dark-gray)"
+    }
+  },
+  "hover_mid_gray": {
+    ":hover": {
+      "color": "var(--mid-gray)"
+    }
+  },
+  "hover_gray": {
+    ":hover": {
+      "color": "var(--gray)"
+    }
+  },
+  "hover_silver": {
+    ":hover": {
+      "color": "var(--silver)"
+    }
+  },
+  "hover_light_silver": {
+    ":hover": {
+      "color": "var(--light-silver)"
+    }
+  },
+  "hover_moon_gray": {
+    ":hover": {
+      "color": "var(--moon-gray)"
+    }
+  },
+  "hover_light_gray": {
+    ":hover": {
+      "color": "var(--light-gray)"
+    }
+  },
+  "hover_near_white": {
+    ":hover": {
+      "color": "var(--near-white)"
+    }
+  },
+  "hover_white": {
+    ":hover": {
+      "color": "var(--white)"
+    }
+  },
+  "hover_bg_black": {
+    ":hover": {
+      "background-color": "var(--black)"
+    }
+  },
+  "hover_bg_near_black": {
+    ":hover": {
+      "background-color": "var(--near-black)"
+    }
+  },
+  "hover_bg_dark_gray": {
+    ":hover": {
+      "background-color": "var(--dark-gray)"
+    }
+  },
+  "hover_bg_mid_gray": {
+    ":hover": {
+      "background-color": "var(--mid-gray)"
+    }
+  },
+  "hover_bg_gray": {
+    ":hover": {
+      "background-color": "var(--gray)"
+    }
+  },
+  "hover_bg_silver": {
+    ":hover": {
+      "background-color": "var(--silver)"
+    }
+  },
+  "hover_bg_light_silver": {
+    ":hover": {
+      "background-color": "var(--light-silver)"
+    }
+  },
+  "hover_bg_moon_gray": {
+    ":hover": {
+      "background-color": "var(--moon-gray)"
+    }
+  },
+  "hover_bg_light_gray": {
+    ":hover": {
+      "background-color": "var(--light-gray)"
+    }
+  },
+  "hover_bg_near_white": {
+    ":hover": {
+      "background-color": "var(--near-white)"
+    }
+  },
+  "hover_bg_white": {
+    ":hover": {
+      "background-color": "var(--white)"
+    }
+  },
+  "hover_bg_transparent": {
+    ":hover": {
+      "background-color": "var(--transparent)"
+    }
+  },
+  "hover_bg_dark_red": {
+    ":hover": {
+      "background-color": "var(--dark-red)"
+    }
+  },
+  "hover_bg_red": {
+    ":hover": {
+      "background-color": "var(--red)"
+    }
+  },
+  "hover_bg_orange": {
+    ":hover": {
+      "background-color": "var(--orange)"
+    }
+  },
+  "hover_bg_gold": {
+    ":hover": {
+      "background-color": "var(--gold)"
+    }
+  },
+  "hover_bg_yellow": {
+    ":hover": {
+      "background-color": "var(--yellow)"
+    }
+  },
+  "hover_bg_purple": {
+    ":hover": {
+      "background-color": "var(--purple)"
+    }
+  },
+  "hover_bg_light_purple": {
+    ":hover": {
+      "background-color": "var(--light-purple)"
+    }
+  },
+  "hover_bg_hot_pink": {
+    ":hover": {
+      "background-color": "var(--hot-pink)"
+    }
+  },
+  "hover_bg_dark_pink": {
+    ":hover": {
+      "background-color": "var(--dark-pink)"
+    }
+  },
+  "hover_bg_pink": {
+    ":hover": {
+      "background-color": "var(--pink)"
+    }
+  },
+  "hover_bg_dark_green": {
+    ":hover": {
+      "background-color": "var(--dark-green)"
+    }
+  },
+  "hover_bg_green": {
+    ":hover": {
+      "background-color": "var(--green)"
+    }
+  },
+  "hover_bg_navy": {
+    ":hover": {
+      "background-color": "var(--navy)"
+    }
+  },
+  "hover_bg_dark_blue": {
+    ":hover": {
+      "background-color": "var(--dark-blue)"
+    }
+  },
+  "hover_bg_blue": {
+    ":hover": {
+      "background-color": "var(--blue)"
+    }
+  },
+  "hover_bg_light_blue": {
+    ":hover": {
+      "background-color": "var(--light-blue)"
+    }
+  },
+  "hover_bg_lightest_blue": {
+    ":hover": {
+      "background-color": "var(--lightest-blue)"
+    }
+  },
+  "hover_bg_washed_blue": {
+    ":hover": {
+      "background-color": "var(--washed-blue)"
+    }
+  },
+  "hover_bg_washed_green": {
+    ":hover": {
+      "background-color": "var(--washed-green)"
+    }
+  },
+  "hover_bg_washed_yellow": {
+    ":hover": {
+      "background-color": "var(--washed-yellow)"
+    }
+  },
+  "hover_bg_light_pink": {
+    ":hover": {
+      "background-color": "var(--light-pink)"
+    }
+  },
+  "hover_bg_light_yellow": {
+    ":hover": {
+      "background-color": "var(--light-yellow)"
+    }
+  },
+  "hover_bg_light_red": {
+    ":hover": {
+      "background-color": "var(--light-red)"
     }
   }
 }
