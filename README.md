@@ -16,8 +16,9 @@ const styles = StyleSheet.create({
     ...t.ma2,
     ...t.ma2_ns,
     ...t.bg_black,
-    ...t.bg_silver_m,
-    ...t.bg_white_l,
+    ...t.ph2,
+    ...t.ph3_m,
+    ...t.ph3_l,
   },
 });
 ```
