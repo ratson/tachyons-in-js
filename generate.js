@@ -1,4 +1,3 @@
-const request = require('request-promise');
 const fs = require('fs');
 const nativeCSS = require('native-css');
 const R = require('ramda');

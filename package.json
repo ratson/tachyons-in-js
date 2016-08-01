@@ -4,20 +4,18 @@
   "description": "Yo dawg I heard you liked Tachyons in your JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node generate.js"
   },
   "author": "Jon Gold <jon.gold@airbnb.com>",
   "license": "MIT",
+  "repository": "jongold/tachyons-js",
   "devDependencies": {
     "native-css": "^1.2.3",
     "ramda": "^0.21.0",
-    "request": "^2.74.0",
-    "request-promise": "^4.0.2",
-    "request-promise-native": "^1.0.2",
     "tachyons-background-size": "^4.0.0",
     "tachyons-border-colors": "^4.1.0",
     "tachyons-border-radius": "^4.2.0",
-    "tachyons-border-style": "^3.1.0",
+    "tachyons-border-style": "^3https://github.com/Khan/aphrodite.1.0",
     "tachyons-border-widths": "^2.1.0",
     "tachyons-borders": "^2.2.1",
     "tachyons-box-shadow": "^1.1.0",
