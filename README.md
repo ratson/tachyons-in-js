@@ -1,12 +1,18 @@
 # tachyons-js
 
-Use tachyons with your favorite CSS-in-JS composition solution. WIP, not
-published to npm just yet.
+Use tachyons with your favorite CSS-in-JS composition solution.
 
 ## Differences:
 - `snake_cased` rather than `kebab-cased`
 
 Works great with [aphrodite](https://github.com/Khan/aphrodite):
+```css
+:root {
+  // fill in all of the tachyons default variables,
+  // or import 'tachyons-js/variables.css';
+}
+```
+
 ```javascript
 import { StyleSheet } from 'aphrodite';
 import t from 'tachyons-js';
