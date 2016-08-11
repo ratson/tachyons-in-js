@@ -8,6 +8,7 @@ const moduleBlacklist = [
   'react-native-style-tachyons',
   'tachyons-base',
   'tachyons-build-css',
+  'tachyons-debug',
   'tachyons-display-verbose',
   'tachyons-verbose',
   'tachyons-webpack',
