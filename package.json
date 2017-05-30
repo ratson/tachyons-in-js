@@ -1,6 +1,6 @@
 {
   "name": "tachyons-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Tachyons for your favorite inline-styles package",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "native-css": "^1.2.3",
     "ramda": "^0.21.0",
+    "tachyons": "^4.7.4",
     "tachyons-aspect-ratios": "^1.0.1",
     "tachyons-background-position": "^1.0.3",
     "tachyons-background-size": "^5.0.5",
@@ -58,8 +59,8 @@
     "tachyons-overflow": "^4.0.4",
     "tachyons-position": "^6.0.4",
     "tachyons-rotations": "^1.0.2",
-    "tachyons-skins-pseudo": "^1.0.3",
     "tachyons-skins": "^4.0.3",
+    "tachyons-skins-pseudo": "^1.0.3",
     "tachyons-spacing": "^6.0.4",
     "tachyons-styles": "^0.3.4",
     "tachyons-tables": "^1.0.7",
@@ -74,7 +75,6 @@
     "tachyons-white-space": "^4.0.5",
     "tachyons-widths": "^5.1.1",
     "tachyons-word-break": "2.0.0",
-    "tachyons-z-index": "^1.0.8",
-    "tachyons": "^4.7.4"
+    "tachyons-z-index": "^1.0.8"
   }
 }
