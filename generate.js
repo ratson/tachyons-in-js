@@ -3,7 +3,9 @@ const nativeCSS = require('native-css');
 const R = require('ramda');
 
 const tachyonsModules = require('tachyons-modules');
+const moduleWhitelist = require('./whitelist')
 
+/*
 const moduleBlacklist = [
   'react-native-style-tachyons',
   'tachyons-base',
@@ -13,6 +15,7 @@ const moduleBlacklist = [
   'tachyons-verbose',
   'tachyons-webpack',
 ];
+*/
 
 // concatMediaQueries :: String -> { k: v } -> { k: v } -> *
 function concatMediaQueries (key, left, right) {
@@ -139,10 +142,9 @@ const extractHoverStyles = styles => {
   }, styles, R.keys(styles));
 }
 
-
 tachyonsModules()
   .then(R.pluck('name'))
-  .then(R.reject(R.contains(R.__, moduleBlacklist)))
+  .then(R.filter(R.contains(R.__, moduleWhitelist)))
   .then(R.reduce(constructFile, {}))
   .then(R.toPairs)
   .then(toJS)
@@ -152,4 +154,3 @@ tachyonsModules()
   .then(toJSON)
   .then(writeFile)
   .catch(e => console.log(e))
-
