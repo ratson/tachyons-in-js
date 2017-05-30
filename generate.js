@@ -27,12 +27,19 @@ const toJS = R.reduce((acc, [k, v]) => {
   return R.mergeWithKey(concatMediaQueries, acc, nativeCSS.convert(v));
 }, {})
 
-
+/*
 const queries = {
   '@media (--breakpoint-not-small)': '@media screen and (min-width: 48em)',
   '@media (--breakpoint-medium)': '@media screen and (min-width: 48em) and (max-width: 64em)',
   '@media (--breakpoint-large)': '@media screen and (min-width: 64em)',
 }
+*/
+
+const queries = {
+  '@media (--breakpoint-not-small)': '@media screen and (min-width: 30em)',
+  '@media (--breakpoint-medium)': '@media screen and (min-width: 30em) and (max-width: 60em)',
+  '@media (--breakpoint-large)': '@media screen and (min-width: 60em)'
+};
 
 const queryKeys = R.keys(queries);
 
