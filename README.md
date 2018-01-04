@@ -1,11 +1,11 @@
-# tachyons-js
+# tachyons-in-js
 
 Use [tachyons](http://tachyons.io) with your favorite CSS-in-JS composition solution.
 
-## Differences:
+## Differences
 - `snake_cased` rather than `kebab-cased`
 
-## Usage:
+## Usage
 Works great with [aphrodite](https://github.com/Khan/aphrodite):
 ```css
 :root {
@@ -16,7 +16,7 @@ Works great with [aphrodite](https://github.com/Khan/aphrodite):
 
 ```javascript
 import { StyleSheet } from 'aphrodite';
-import t from 'tachyons-js';
+import t from 'tachyons-in-js';
 
 const styles = StyleSheet.create({
   foo: {
@@ -30,4 +30,6 @@ const styles = StyleSheet.create({
 });
 ```
 
-hmu if it breaks.
+## Credit
+
+Fork of [tachyons-js](https://github.com/jongold/tachyons-js), thanks @jongold for creating it.
