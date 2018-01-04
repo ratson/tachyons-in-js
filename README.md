@@ -10,7 +10,7 @@ Works great with [aphrodite](https://github.com/Khan/aphrodite):
 ```css
 :root {
   // fill in all of the tachyons default variables,
-  // or import 'tachyons-js/variables.css';
+  // or import 'tachyons-in-js/variables.css';
 }
 ```
 
