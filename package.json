@@ -1,21 +1,22 @@
 {
-  "name": "tachyons-js",
+  "name": "tachyons-in-js",
   "version": "0.3.1",
   "description": "Tachyons for your favorite inline-styles package",
   "main": "index.js",
   "scripts": {
     "build": "node generate.js"
   },
-  "author": "Jon Gold <jon.gold@airbnb.com>",
   "license": "MIT",
-  "repository": "jongold/tachyons-js",
+  "repository": "ratson/tachyons-in-js",
   "keywords": [
     "css",
     "oocss",
     "functional css",
     "design",
     "responsive",
-    "performance"
+    "performance",
+    "tachyons",
+    "css-in-js"
   ],
   "devDependencies": {
     "native-css": "^2.0.0",
