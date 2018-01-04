@@ -35,7 +35,6 @@ module.exports = [
     'tachyons-skins',
     'tachyons-skins-pseudo',
     'tachyons-spacing',
-    'tachyons-negative-margin',
     'tachyons-tables',
     'tachyons-text-decoration',
     'tachyons-text-align',
