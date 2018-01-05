@@ -1,6 +1,6 @@
 {
   "name": "tachyons-in-js",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Tachyons for your favorite inline-styles package",
   "main": "index.js",
   "scripts": {
