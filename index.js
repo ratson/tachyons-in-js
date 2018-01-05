@@ -415,7 +415,7 @@ module.exports = {
   },
   "code": {
     "boxSizing": "border-box",
-    "fontFamily": "Consolas,\n               monaco,\n               monospace"
+    "fontFamily": "Consolas,monaco,monospace"
   },
   "p": {
     "boxSizing": "border-box"
@@ -772,10 +772,10 @@ module.exports = {
     "float": "none"
   },
   "sans_serif": {
-    "fontFamily": "-apple-system, BlinkMacSystemFont,\n               'avenir next', avenir,\n               helvetica, 'helvetica neue',\n               ubuntu,\n               roboto, noto,\n               'segoe ui', arial,\n               sans-serif"
+    "fontFamily": "-apple-system, BlinkMacSystemFont,'avenir next', avenir,helvetica, 'helvetica neue',ubuntu,roboto, noto,'segoe ui', arial,sans-serif"
   },
   "serif": {
-    "fontFamily": "georgia,\n               times,\n               serif"
+    "fontFamily": "georgia,times,serif"
   },
   "system_sans_serif": {
     "fontFamily": "sans-serif"
@@ -784,34 +784,34 @@ module.exports = {
     "fontFamily": "serif"
   },
   "courier": {
-    "fontFamily": "'Courier Next',\n               courier,\n               monospace"
+    "fontFamily": "'Courier Next',courier,monospace"
   },
   "helvetica": {
-    "fontFamily": "'helvetica neue', helvetica,\n               sans-serif"
+    "fontFamily": "'helvetica neue', helvetica,sans-serif"
   },
   "avenir": {
-    "fontFamily": "'avenir next', avenir,\n               sans-serif"
+    "fontFamily": "'avenir next', avenir,sans-serif"
   },
   "athelas": {
-    "fontFamily": "athelas,\n               georgia,\n               serif"
+    "fontFamily": "athelas,georgia,serif"
   },
   "georgia": {
-    "fontFamily": "georgia,\n               serif"
+    "fontFamily": "georgia,serif"
   },
   "times": {
-    "fontFamily": "times,\n               serif"
+    "fontFamily": "times,serif"
   },
   "bodoni": {
-    "fontFamily": "\"Bodoni MT\",\n                serif"
+    "fontFamily": "\"Bodoni MT\",serif"
   },
   "calisto": {
-    "fontFamily": "\"Calisto MT\",\n                serif"
+    "fontFamily": "\"Calisto MT\",serif"
   },
   "garamond": {
-    "fontFamily": "garamond,\n               serif"
+    "fontFamily": "garamond,serif"
   },
   "baskerville": {
-    "fontFamily": "baskerville,\n               serif"
+    "fontFamily": "baskerville,serif"
   },
   "i": {
     "fontStyle": "italic"

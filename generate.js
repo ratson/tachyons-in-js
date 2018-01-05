@@ -149,6 +149,10 @@ const extractHoverStyles = styles => {
   }, styles, R.keys(styles));
 }
 
+const removeNewLine = x => x.replace ? x.replace(/\n\s*/g, '') : x;
+
+const removeNewLines = styles => R.map(R.map(removeNewLine), styles)
+
 tachyonsModules()
   .then(R.pluck('name'))
   .then(R.filter(R.contains(R.__, moduleWhitelist)))
@@ -157,6 +161,7 @@ tachyonsModules()
   .then(toJS)
   .then(mergeMediaQueries)
   .then(extractHoverStyles)
+  .then(removeNewLines)
   .then(R.omit(['root']))
   .then(toJSON)
   .then(writeFile)
